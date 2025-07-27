@@ -56,29 +56,37 @@ body {
         /* Heading styles */
         h1, h2, h3, h4 {
             color: #212529; /* Even darker charcoal for headings */
-            font-weight: 700;
+            font-weight: 7rem;
+            text-align: center;
+        }
+        h1{
+            padding-top: 1.3rem;
+        }
+
+        .site-title h3{
+            color: white;
         }
 
         h2 {
-            font-size: 3rem; /* Larger section titles */
+            font-size: 2.5rem; /* Larger section titles */
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem; /* Increased gap */
             position: relative;
-            padding-bottom: 0.75rem;
+            padding-bottom: 2rem;
             color: #0056b3; /* Professional blue accent for main headings */
         }
 
-        h2::after {
+        /* h2::after {
             content: '';
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             bottom: 0;
             width: 100px; /* Wider underline */
-            height: 5px; /* Thicker underline */
-            background-color: #0056b3; /* Professional blue accent */
-            border-radius: 9999px;
-        }
+           /* height: 5px; /* Thicker underline */
+            /*background-color: #0056b3; /* Professional blue accent */
+            /*border-radius: 9999px;
+        }*/
 
         /* Links and Buttons */
         a {
@@ -118,6 +126,7 @@ body {
 
         /* Hero image styling */
         .hero-image-container img {
+            object-position: center;
             border: 8px solid rgba(255, 255, 255, 0.8); /* Thicker, more prominent border */
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); /* Stronger shadow */
             transition: transform 0.4s ease-in-out;
