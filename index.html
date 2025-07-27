@@ -3,27 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selvarathi L. - Portfolio</title>
+    <title>Selvarathi L. - Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
-    <section id="about" class="min-h-screen flex items-center justify-center text-center px-4">
-        <!-- Increased max-width from 4xl to 6xl and gap from 16 to 20 for more space -->
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-20">
+<body>
+
+    <!-- Fixed Header with Navigation -->
+    <header class="main-header py-4">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="text-2xl font-extrabold site-title">
+                <a href="#about" class="hover:text-white">Selvarathi L</a>
+            </div>
+            <nav class="main-nav hidden md:flex space-x-6">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white hover:text-gray-200 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation (hidden by default) -->
+        <nav id="mobile-menu" class="main-nav md:hidden flex flex-col items-center mt-4 space-y-3 hidden">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero/About Me Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center text-center px-8 pt-20 md:pt-0">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-20">
             <div class="hero-image-container flex-shrink-0">
-                <!-- Your professional photo -->
                 <img src="assets/selvarathi-photo.jpg" 
                      alt="Selvarathi L. Professional Photo"
                      class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover"
-                     onerror="this.onerror=null;this.src='https://placehold.co/320x320/e0f2f7/2c3e50?text=Image+Not+Found';">
+                     onerror="this.onerror=null;this.src='https://placehold.co/320x320/f8f9fa/212529?text=Image+Not+Found';">
             </div>
             <div class="hero-text text-left md:text-left">
-                <!-- Adjusted margin-bottom (mb) values for better spacing -->
-                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-5">Selvarathi L</h1>
-                <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">Aspiring Software Developer | Backend Enthusiast</h2>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-5">Selvarathi L</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">Aspiring Software Developer | Backend Enthusiast</h2>
                 <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-10">
                     Driven B.Tech student in Artificial Intelligence and Data Science at Shiv Nadar University, Chennai (expected May 2027), with a strong interest in developing robust backend systems and dealing with databases. I am eagerly learning more about backend development and actively building small projects to apply my knowledge. I also enjoy solving problems on LeetCode, which further sharpens my analytical skills. I am committed to continuous learning in software development.
                 </p>
@@ -40,186 +74,196 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="max-w-6xl mx-auto">
-        <h2>My Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            <!-- Project 1: Airline Reservation System -->
-            <div class="project-card p-6 rounded-2xl shadow-lg flex flex-col">
-                <h3>Airline Reservation System</h3>
-                <p class="project-description">
-                    Designed a full-stack web application to manage flight bookings and ticketing. Applied DBMS concepts including schema design, query handling, and transactions to ensure data integrity and efficient operations.
-                </p>
-                <div class="project-tech-tags">
-                    <span>MySQL</span>
-                    <span>Flask</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
+    <section id="projects" class="px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2>My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Project 1: Airline Reservation System -->
+                <div class="project-card p-6 rounded-2xl shadow-lg flex flex-col">
+                    <h3>Airline Reservation System</h3>
+                    <p class="project-description">
+                        Designed a full-stack web application to manage flight bookings and ticketing. Applied DBMS concepts including schema design, query handling, and transactions to ensure data integrity and efficient operations.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span>MySQL</span>
+                        <span>Flask</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <div class="project-links mt-auto flex flex-wrap gap-3">
+                        <a href="https://github.com/SelvarathiL/Airline-Reservation-System" target="_blank" class="btn bg-gray-800 text-gray-200 hover:bg-gray-700">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
-                <div class="project-links mt-auto flex flex-wrap gap-3">
-                    <a href="https://github.com/SelvarathiL/Airline-Reservation-System" target="_blank" class="btn bg-gray-800 text-gray-200 hover:bg-gray-700">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
 
-            <!-- Project 2: Personal Notes App -->
-            <div class="project-card p-6 rounded-2xl shadow-lg flex flex-col">
-                <h3>Personal Notes App</h3>
-                <p class="project-description">
-                    Built a web-based Notes App for creating, viewing, editing, and deleting personal notes. Implemented secure user authentication using Node.js and MySQL. Designed a dashboard with a notebook-style UI and modal-based note editing.
-                </p>
-                <div class="project-tech-tags">
-                    <span>Node.js</span>
-                    <span>Express.js</span>
-                    <span>MySQL</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
+                <!-- Project 2: Personal Notes App -->
+                <div class="project-card p-6 rounded-2xl shadow-lg flex flex-col">
+                    <h3>Personal Notes App</h3>
+                    <p class="project-description">
+                        Built a web-based Notes App for creating, viewing, editing, and deleting personal notes. Implemented secure user authentication using Node.js and MySQL. Designed a dashboard with a notebook-style UI and modal-based note editing.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>MySQL</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links mt-auto flex flex-wrap gap-3">
+                        <a href="https://github.com/SelvarathiL/Notes-app" target="_blank" class="btn bg-gray-800 text-gray-200 hover:bg-gray-700">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
-                <div class="project-links mt-auto flex flex-wrap gap-3">
-                    <a href="https://github.com/SelvarathiL/Notes-app" target="_blank" class="btn bg-gray-800 text-gray-200 hover:bg-gray-700">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
 
-            <!-- Project 3: String Matching using Genetic Algorithm -->
-            <div class="project-card p-6 rounded-2xl shadow-lg flex flex-col">
-                <h3>String Matching (Genetic Algorithm)</h3>
-                <p class="project-description">
-                    Simulated genetic operations to evolve a string toward a target value. Created a web interface to display each generation’s progress and fitness, demonstrating the application of AI techniques.
-                </p>
-                <div class="project-tech-tags">
-                    <span>Python</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <div class="project-links mt-auto flex flex-wrap gap-3">
-                    <a href="https://github.com/SelvarathiL/String-Matching-using-Genetic-Algorithm" target="_blank" class="btn bg-gray-800 text-gray-200 hover:bg-gray-700">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
+                <!-- Project 3: String Matching using Genetic Algorithm -->
+                <div class="project-card p-6 rounded-2xl shadow-lg flex flex-col">
+                    <h3>String Matching (Genetic Algorithm)</h3>
+                    <p class="project-description">
+                        Simulated genetic operations to evolve a string toward a target value. Created a web interface to display each generation’s progress and fitness, demonstrating the application of AI techniques.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span>Python</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links mt-auto flex flex-wrap gap-3">
+                        <a href="https://github.com/SelvarathiL/String-Matching-using-Genetic-Algorithm" target="_blank" class="btn bg-gray-800 text-gray-200 hover:bg-gray-700">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="max-w-6xl mx-auto">
-        <h2>My Skills & Technologies</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="skill-category p-6 rounded-2xl shadow-lg">
-                <h4 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-code mr-3 text-blue-600"></i> Programming Languages</h4>
-                <div class="skill-tags">
-                    <span>Python</span>
-                    <span>C</span>
-                    <span>Java</span>
-                    <span>C++</span>
+    <section id="skills" class="px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2>My Skills & Technologies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="skill-category p-6 rounded-2xl shadow-lg">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-code mr-3 text-blue-600"></i> Programming Languages</h4>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>C</span>
+                        <span>Java</span>
+                        <span>C++</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category p-6 rounded-2xl shadow-lg">
-                <h4 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-globe mr-3 text-blue-600"></i> Web Development</h4>
-                <div class="skill-tags">
-                    <span>Flask</span>
-                    <span>Node.js</span>
-                    <span>Express.js</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
+                <div class="skill-category p-6 rounded-2xl shadow-lg">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-globe mr-3 text-blue-600"></i> Web Development</h4>
+                    <div class="skill-tags">
+                        <span>Flask</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category p-6 rounded-2xl shadow-lg">
-                <h4 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-database mr-3 text-blue-600"></i> Databases</h4>
-                <div class="skill-tags">
-                    <span>SQL</span>
-                    <span>RDBMS</span>
-                    <span>MySQL</span>
+                <div class="skill-category p-6 rounded-2xl shadow-lg">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-database mr-3 text-blue-600"></i> Databases</h4>
+                    <div class="skill-tags">
+                        <span>SQL</span>
+                        <span>RDBMS</span>
+                        <span>MySQL</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category p-6 rounded-2xl shadow-lg">
-                <h4 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-brain mr-3 text-blue-600"></i> Data Science & ML</h4>
-                <div class="skill-tags">
-                    <span>Machine Learning</span>
-                    <span>NumPy</span>
-                    <span>Pandas</span>
-                    <span>Scikit-Learn</span>
-                    <span>Matplotlib</span>
+                <div class="skill-category p-6 rounded-2xl shadow-lg">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center"><i class="fas fa-brain mr-3 text-blue-600"></i> Data Science & ML</h4>
+                    <div class="skill-tags">
+                        <span>Machine Learning</span>
+                        <span>NumPy</span>
+                        <span>Pandas</span>
+                        <span>Scikit-Learn</span>
+                        <span>Matplotlib</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="max-w-4xl mx-auto">
-        <h2>Education</h2>
-        <div class="space-y-6">
-            <div class="education-item p-6 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-semibold mb-2">Shiv Nadar University, Chennai</h3>
-                <p class="text-xl text-gray-700">B.Tech in Artificial Intelligence and Data Science</p>
-                <p class="text-lg text-gray-600">August 2023 – May 2027 (Expected)</p>
-                <p class="text-lg text-gray-600">CGPA: 8.8 / 10.0</p>
-            </div>
-            <div class="education-item p-6 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-semibold mb-2">Govt. Higher Secondary School, Veppalodai, Tuticorin</h3>
-                <p class="text-xl text-gray-700">Higher Secondary Education (12th Standard)</p>
-                <p class="text-lg text-gray-600">June 2021 – May 2023</p>
-                <p class="text-lg text-gray-600">Score: 94.67%</p>
+    <section id="education" class="px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2>Education</h2>
+            <div class="space-y-6">
+                <div class="education-item p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Shiv Nadar University, Chennai</h3>
+                    <p class="text-xl text-gray-700">B.Tech in Artificial Intelligence and Data Science</p>
+                    <p class="text-lg text-gray-600">August 2023 – May 2027 (Expected)</p>
+                    <p class="text-lg text-gray-600">CGPA: 8.8 / 10.0</p>
+                </div>
+                <div class="education-item p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Govt. Higher Secondary School, Veppalodai, Tuticorin</h3>
+                    <p class="text-xl text-gray-700">Higher Secondary Education (12th Standard)</p>
+                    <p class="text-lg text-gray-600">June 2021 – May 2023</p>
+                    <p class="text-lg text-gray-600">Score: 94.67%</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="max-w-6xl mx-auto">
-        <h2>Achievements & Recognition</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="achievement-item p-6 rounded-2xl shadow-lg">
-                <div class="icon"><i class="fas fa-award"></i></div>
-                <strong class="text-xl mb-2 block">SPURS Merit Scholarship</strong>
-                <p class="text-gray-700 text-sm">Awarded for outstanding academic excellence, covering full academic fees for four years.</p>
-            </div>
-            <div class="achievement-item p-6 rounded-2xl shadow-lg">
-                <div class="icon"><i class="fas fa-star"></i></div>
-                <strong class="text-xl mb-2 block">12th Standard Board Exam Topper</strong>
-                <p class="text-gray-700 text-sm">Achieved school first with 94.67% score.</p>
-            </div>
-            <div class="achievement-item p-6 rounded-2xl shadow-lg">
-                <div class="icon"><i class="fas fa-lightbulb"></i></div>
-                <strong class="text-xl mb-2 block">Smart India Hackathon (SIH) Participant</strong>
-                <p class="text-gray-700 text-sm">Developed an AI chatbot for museum ticket booking.</p>
-            </div>
-            <div class="achievement-item p-6 rounded-2xl shadow-lg">
-                <div class="icon"><i class="fas fa-microphone-alt"></i></div>
-                <strong class="text-xl mb-2 block">District Level Speech Competition Winner</strong>
-                <p class="text-gray-700 text-sm">Secured victory in Tamil speech competition.</p>
+    <section id="achievements" class="px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2>Achievements & Recognition</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="achievement-item p-6 rounded-2xl shadow-lg">
+                    <div class="icon"><i class="fas fa-award"></i></div>
+                    <strong class="text-xl mb-2 block">SPURS Merit Scholarship</strong>
+                    <p class="text-gray-700 text-sm">Awarded for outstanding academic excellence, covering full academic fees for four years.</p>
+                </div>
+                <div class="achievement-item p-6 rounded-2xl shadow-lg">
+                    <div class="icon"><i class="fas fa-star"></i></div>
+                    <strong class="text-xl mb-2 block">12th Standard Board Exam Topper</strong>
+                    <p class="text-gray-700 text-sm">Achieved school first with 94.67% score.</p>
+                </div>
+                <div class="achievement-item p-6 rounded-2xl shadow-lg">
+                    <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                    <strong class="text-xl mb-2 block">Smart India Hackathon (SIH) Participant</strong>
+                    <p class="text-700 text-sm">Developed an AI chatbot for museum ticket booking.</p>
+                </div>
+                <div class="achievement-item p-6 rounded-2xl shadow-lg">
+                    <div class="icon"><i class="fas fa-microphone-alt"></i></div>
+                    <strong class="text-xl mb-2 block">District Level Speech Competition Winner</strong>
+                    <p class="text-gray-700 text-sm">Secured victory in Tamil speech competition.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="max-w-4xl mx-auto text-center">
-        <h2>Get in Touch</h2>
-        <p class="text-lg text-gray-700 mb-8">I'm always open to new opportunities and collaborations. Feel free to connect!</p>
-        <div class="contact-links flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-            <a href="mailto:selvarathi23110561@snuchennai.edu.in" class="icon-link btn">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="tel:9092402550" class="icon-link btn">
-                <i class="fas fa-phone"></i> Phone
-            </a>
-            <a href="https://www.linkedin.com/in/selvarathi-l" target="_blank" class="icon-link btn">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/SelvarathiL" target="_blank" class="icon-link btn">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="YOUR_LEETCODE_PROFILE_LINK" target="_blank" class="icon-link btn">
-                <i class="fas fa-code"></i> LeetCode
-            </a>
+    <section id="contact" class="px-8 text-center">
+        <div class="max-w-7xl mx-auto">
+            <h2>Get in Touch</h2>
+            <p class="text-lg text-gray-700 mb-8">I'm always open to new opportunities and collaborations. Feel free to connect!</p>
+            <div class="contact-links flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+                <a href="mailto:selvarathi23110561@snuchennai.edu.in" class="icon-link btn">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="tel:9092402550" class="icon-link btn">
+                    <i class="fas fa-phone"></i> Phone
+                </a>
+                <a href="https://www.linkedin.com/in/selvarathi-l-431794319/" target="_blank" class="icon-link btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/SelvarathiL" target="_blank" class="icon-link btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://leetcode.com/u/EuXmVRHFoX/" target="_blank" class="icon-link btn">
+                    <i class="fas fa-code"></i> LeetCode
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-8 text-gray-600 text-sm">
+    <footer class="text-center py-8 text-gray-600 text-sm bg-gray-100">
         <p>&copy; 2025 Selvarathi L. All rights reserved.</p>
     </footer>
 
@@ -230,6 +274,24 @@
 
     <script>
         // JavaScript for scroll-reveal animation and scroll-to-top button
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
 
         // Scroll-reveal logic
         const sections = document.querySelectorAll('section');
